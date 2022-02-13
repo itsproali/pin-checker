@@ -20,7 +20,6 @@ document.getElementById('key-pad').addEventListener('click', function (event) {
     } else {
         const previousNumber = showInput.value;
         showInput.value = previousNumber + myInput;
-        // return showInput.value;
     }
 });
 
@@ -35,7 +34,7 @@ document.getElementById('submit-button').addEventListener('click', function () {
         document.getElementById('pin-not-matched').style.display = 'none';
     } else {
         submittedPin.value = '';
-        document.getElementById('pin-not-matched').style.display = 'block'; 
-        document.getElementById('pin-matched').style.display = 'none'; 
+        document.getElementById('pin-not-matched').style.display = 'block';
+        document.getElementById('pin-matched').style.display = 'none';
     }
-})
+});
