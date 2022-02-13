@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="notify-section">
+            <p id="pin-not-matched" class="notify" style="display: none;">❌ Pin Didn't Match, Please try again</p>
+            <p id="pin-matched" class="notify" style="display: none;">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="show-generated" class="form-control" type="text">
+                    <button id="pin-generator" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="show-input" class="form-control" type="text">
+                    <div class="numbers">
+                        <div id="key-pad" class="calc-body">
+                            <div class="calc-button-row">
+                              <button class="button btn text-white">7</button>
+                              <button class="button btn text-white">8</button>
+                              <button class="button btn text-white">9</button>
+                            </div>
+                            <div class="calc-button-row">
+                              <button class="button btn text-white">4</button>
+                              <button class="button btn text-white">5</button>
+                              <button class="button btn text-white">6</button>
+                            </div>
+                            <div class="calc-button-row">
+                              <button class="button btn text-white">1</button>
+                              <button class="button btn text-white">2</button>
+                              <button class="button btn text-white">3</button>
+                            </div>
+                            <div class="calc-button-row">
+                                <button class="button btn text-white">&lt;</button>
+                                <button class="button btn text-white">0</button>
+                                <button class="button btn text-white">C</button>
+                            </div>
+                            <div>
+                                <button id="submit-button" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left">3 try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>
