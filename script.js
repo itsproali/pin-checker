@@ -2,9 +2,12 @@
 document.getElementById('pin-generator').addEventListener('click', function () {
     const randomNumber = 999 + parseInt(Math.random() * 9000);
     document.getElementById('show-generated').value = randomNumber;
-    document.getElementById('pin-matched').style.display = 'none'; 
+    document.getElementById('pin-matched').style.display = 'none';
     document.getElementById('pin-not-matched').style.display = 'none';
-    document.getElementById('submit-button').removeAttribute("disabled", true);
+    if (document.getElementById('trial-notify').innerText.includes('3') != true) {
+        document.getElementById('submit-button').removeAttribute("disabled", true);
+        location.reload();
+    }
 });
 
 // User Input Function
