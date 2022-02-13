@@ -4,6 +4,7 @@ document.getElementById('pin-generator').addEventListener('click', function () {
     document.getElementById('show-generated').value = randomNumber;
     document.getElementById('pin-matched').style.display = 'none'; 
     document.getElementById('pin-not-matched').style.display = 'none';
+    document.getElementById('submit-button').removeAttribute("disabled", true);
 });
 
 // User Input Function
@@ -36,5 +37,10 @@ document.getElementById('submit-button').addEventListener('click', function () {
         submittedPin.value = '';
         document.getElementById('pin-not-matched').style.display = 'block';
         document.getElementById('pin-matched').style.display = 'none';
+        document.getElementById('try-left').innerText = parseInt(document.getElementById('try-left').innerText) - 1;
+        if (document.getElementById('try-left').innerText < 0) {
+            document.getElementById('trial-notify').innerText = 'You entered many wrong pin. Please, try to generate pin again';
+            document.getElementById('submit-button').setAttribute("disabled", false);
+        }
     }
 });
